@@ -1,4 +1,4 @@
-@use '_mixin' as m;
+@use "_mixin" as m;
 
 header {
   width: 100%;
@@ -10,18 +10,28 @@ header {
   padding-inline: 15px;
   z-index: 1000;
 
+  @include m.tb {
+    width: 200px;
+    left: auto;
+    right: 0;
+  }
+
   .container {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba( 255, 255, 255, .5);
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 30px;
     padding-inline: 32px;
 
     .logo {
       width: 60px;
+
+      @include m.tb {
+        display: none;
+      }
     }
 
     .menu {
@@ -30,13 +40,8 @@ header {
       align-items: center;
 
       @include m.tb {
-        width: 50%;
         flex-direction: column;
         margin-left: auto;
-        position: fixed;
-        top: 10%;
-        right: 5%;
-        z-index: 1100;
       }
 
       nav {
@@ -46,7 +51,7 @@ header {
           z-index: 1100;
           display: none;
         }
-        
+
         ul {
           display: flex;
           justify-content: space-between;
@@ -55,7 +60,7 @@ header {
             text-align: center;
             flex-direction: column;
           }
-          
+
           li {
             margin-right: 16px;
 
@@ -63,25 +68,28 @@ header {
               margin-right: 0;
               margin-bottom: 24px;
             }
-            
+
             &:last-child {
               margin-right: 0;
             }
-            
+
             a {
               &:hover {
                 color: m.$base-color;
+
+                @include m.tb {
+                  opacity: .5;
+                }
               }
 
-              @include m.tb{
+              @include m.tb {
                 color: m.$base-color;
               }
             }
           }
-
         }
       }
-      
+
       .sns {
         display: flex;
         justify-content: space-between;
@@ -90,33 +98,28 @@ header {
         li {
           width: 20px;
           line-height: 0;
+          transition: .3s ease;
           margin-right: 16px;
-          
+
           &:last-child {
             margin-right: 0;
           }
-        }
-        
-        .instagram,
-        .tel {
-          @include m.tb {
-            display: none;
+
+          &:hover {
+            opacity: .5;
           }
         }
-        
+
         .tb-instagram,
         .tb-tel {
           display: none;
-          
-          @include m.tb {
-            display: block;
-            // text-align: center;
-          }
         }
       }
 
       .nav-logo {
+        width: 80%;
         display: none;
+        margin-top: 24px;
       }
     }
 
@@ -132,10 +135,22 @@ header {
         display: block;
       }
 
+      &:hover {
+        span {
+          &:nth-child(1) {
+            width: 100%;
+          }
+          
+          &:nth-child(2) {
+            width: 100%;
+          }
+        }
+      }
+
       span {
         height: 1px;
         background-color: m.$font-color;
-        transition: .3s ease;
+        transition: 0.3s ease;
         position: absolute;
 
         &:nth-child(1) {
@@ -156,26 +171,59 @@ header {
         }
       }
     }
-    
+
     .mask {
-      width: 50%;
+      width: 350px;
       height: 500px;
-      background-color: rgba( 255, 255, 255, .9);
+      background-color: rgba(255, 255, 255, 0.9);
       border-radius: 30px;
       position: absolute;
       top: 5%;
       right: 5%;
       display: none;
       z-index: 1050;
+
+      @include m.sp {
+        width: 200px;
+        height: 400px;
+      }
     }
   }
 
   &.active {
     .menu {
+      width: 350px;
+      position: fixed;
+      top: 10%;
+      right: 2.5%;
+      z-index: 1100;
+
+      @include m.sp {
+        width: 200px;
+      }
+
       nav {
         display: block;
+
+        @include m.tb {
+          margin-right: 0;
+        }
       }
-      
+
+      .sns {
+        .instagram,
+        .tel {
+          @include m.tb {
+            display: none;
+          }
+        }
+        
+        .tb-instagram,
+        .tb-tel {
+          display: block;
+        }
+      }
+
       .nav-logo {
         display: block;
       }
@@ -185,7 +233,13 @@ header {
       position: absolute;
       top: 10%;
       right: 10%;
-      
+
+      &:hover {
+        span {
+          opacity: .5;
+        }
+      }
+
       span {
         background-color: m.$base-color;
         &:nth-child(1) {
