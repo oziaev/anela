@@ -1,0 +1,113 @@
+@use "_mixin" as m;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: m.$base-color;
+  color: m.$font-color;
+}
+
+body {
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: m.$font-color;
+  display: inline-block;
+  transition: 0.5s ease;
+
+  &:hover {
+    color: m.$accent-color;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.container {
+  max-width: 1024px;
+  margin-inline: auto;
+  padding-inline: m.$padding;
+}
+
+.wrapper {
+  max-width: 768px;
+  margin-inline: auto;
+  padding-inline: m.$padding;
+}
+
+.small {
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+  color: m.$accent-color;
+
+  @include m.sp {
+    font-size: 2.4rem;
+  }
+}
+
+h3 {
+  font-size: 2.4rem;
+  color: m.$accent-color;
+
+  @include m.sp {
+    font-size: 2rem;
+  }
+}
+
+#contact {
+  text-align: center;
+  padding-top: m.$bottom;
+
+  .contact-title {
+    margin-bottom: m.$bottom-sp;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  .sns {
+    margin-bottom: 24px;
+  }
+
+  .attention {
+    font-size: m.$fs-small;
+    color: m.$accent-color;
+    margin-bottom: m.$bottom-sp;
+  }
+
+  .address {
+    margin-bottom: m.$bottom-sp;
+  }
+
+  iframe {
+    width: 100%;
+    height: 40vh;
+
+    @include m.sp {
+      height: 20vh;
+    }
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}

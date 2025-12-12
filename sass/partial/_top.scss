@@ -1,0 +1,242 @@
+@use '_mixin' as m;
+
+#top {
+
+  .mainvisual {
+    height: calc(100vh - 100px);
+    margin-top: 100px;
+
+    @include m.tb {
+      height: calc(50vh - 100px);
+      margin-bottom: m.$bottom-sp;
+    }
+  }
+
+  #info {
+    text-align: center;
+    padding-inline: m.$padding;
+    margin-top: m.$bottom;
+
+    .wrapper {
+      border: 1px solid m.$accent-color;
+      border-radius: 30px;
+      padding: m.$bottom-sp;
+
+      .info-title {
+        margin-bottom: 32px;
+      }
+
+      .info-block {
+        margin-bottom: 24px;
+
+        h3 {
+          font-size: 1.8rem;
+          margin-bottom: 16px;
+        }
+
+        .sns {
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+
+  #alcohol {
+    text-align: right;
+    padding-top: m.$bottom;
+    margin-bottom: m.$bottom;
+
+    .alcohol-list {
+      text-align: left;
+
+      .left,
+      .right {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: m.$bottom;
+
+        @include m.tb {
+          flex-direction: column;
+        }
+
+        .alcohol-img {
+          width: 60%;
+
+          @include m.tb {
+            width: 90%;
+          }
+
+          @include m.sp {
+            width: 100%;
+          }
+        }
+        
+        .text {
+          width: 60%;
+          background-color: rgba(5, 78, 112, .8);
+          position: absolute;
+          top: 20%;
+          padding: 32px 48px;
+
+          @include m.tb {
+            width: 80%;
+            position: static;
+            padding: 0;
+            margin-top: 24px;
+          }
+
+          @include m.sp {
+            width: 100%;
+          }
+
+          h3 {
+            position: relative;
+            color: m.$font-color;
+            margin-bottom: 16px;
+
+            span {
+              display: inline-block;
+              position: absolute;
+              top: -13px;
+              left: 0;
+              font-size: m.$fs-small;
+              color: m.$accent-color;
+            }
+          }
+
+          p {
+            margin-bottom: 16px;
+          }
+
+          .feature {
+
+            .feature-list {
+              list-style: inside;
+              list-style-type: disc;
+            }
+          }
+        }
+
+        .frame {
+          width: 100px;
+          position: absolute;
+          bottom: -40px;
+
+          @include m.sp {
+            width: 70px;
+            top: 0;
+            bottom: auto;
+            transform: rotate(270deg);
+          }
+        }
+      }
+
+      .left {
+        .text {
+          right: 0;
+        }
+
+        .frame {
+          right: 0;
+        }
+      }
+
+      .right {
+        flex-direction: row-reverse;
+
+        @include m.tb {
+          flex-direction: column-reverse;
+        }
+
+        .text {
+          left: 0;
+        }
+
+        .frame {
+          left: 0;
+          transform: rotate(90deg);
+
+          @include m.tb {
+            left: auto;
+            right: 0;
+            transform: rotate(0deg);
+          }
+
+          @include m.sp {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+
+    .link {
+      position: relative;
+      overflow: hidden;
+      
+      &:hover::after {
+        background-color: m.$accent-color;
+      }
+      
+      &::after {
+        width: 40px;
+        height: 1px;
+        background-color: m.$font-color;
+        transition: .5s ease;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        animation: arrowFlow 2s linear infinite;
+      }
+    }
+  }
+
+  #gallery {
+    text-align: center;
+
+    .gallery-title {
+      margin-bottom: m.$bottom-sp;
+    }
+
+    .gallery-lists {
+      display: grid;
+      grid-template-columns: repeat( 3, 1fr);
+
+      @include m.sp {
+        grid-template-columns: repeat( 2,1fr);
+      }
+
+      li {
+        overflow: hidden;
+        
+        &:hover img {
+          transform: scale(1.05);
+        }
+        
+        img {
+          height: 100%;
+          transition: .3s ease;
+        }
+      }
+    }
+  }
+}
+
+@keyframes arrowFlow {
+  0% {
+    transform: translate(-100px, -50%); /* 左外から */
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(40px, -50%);  /* 右の外へ */
+    opacity: 0;
+  }
+}

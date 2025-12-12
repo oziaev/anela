@@ -1,0 +1,15 @@
+@use '_mixin' as m;
+
+footer {
+  text-align: right;
+  padding: 32px 0;
+
+  nav {
+    margin-bottom: 24px;
+
+  }
+
+  p {
+    font-size: m.$fs-small;
+  }
+}

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- 基本メタ -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no,email=no,address=no" />
+
+    <!-- ページタイトル（各ページで動的に差し替えてください） -->
+    <title>アネラ — 隠れ家スナック | Anela</title>
+    <meta
+      name="description"
+      content="アネラ（Anela）は落ち着いた大人のためのスナックです。焼酎・ウイスキー・ワイン・シャンパン・日本酒（山丹政宗 ほか）を取り揃えております。ご予約はSNS DMまたはお電話で承ります。" />
+
+    <!-- keywordsは必須ではないが簡易的に -->
+    <meta
+      name="keywords"
+      content="スナック, アネラ, Anela, 焼酎, ウイスキー, ワイン, シャンパン, 日本酒, 山丹政宗, 愛媛スナック" />
+    <meta name="author" content="BOS Co., Ltd." />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://example.com/" />
+    <!-- TODO: 実サイトのURLに差し替え -->
+
+    <!-- Favicon / Manifest -->
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- テーマカラー -->
+    <meta name="theme-color" content="#066C9C" />
+
+    <!-- Open Graph (SNSでの共有用) -->
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Anela (アネラ)" />
+    <meta property="og:title" content="アネラ — 大人の隠れ家スナック | Anela" />
+    <meta
+      property="og:description"
+      content="落ち着いた大人のためのスナック。焼酎・ウイスキー・ワイン・シャンパン・日本酒（山丹政宗 ほか）をご用意しています。" />
+    <meta property="og:url" content="https://example.com/" />
+    <!-- TODO -->
+    <meta property="og:image" content="https://example.com/og-image.jpg" />
+    <!-- TODO: 推奨 1200x630px -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@your_twitter" />
+    <!-- TODO: あれば差し替え -->
+    <meta name="twitter:title" content="アネラ — 大人の隠れ家スナック" />
+    <meta
+      name="twitter:description"
+      content="焼酎・ウイスキー・ワイン・シャンパン・日本酒（山丹政宗 ほか）を取り揃えています。" />
+    <meta
+      name="twitter:image"
+      content="https://example.com/twitter-image.jpg" />
+    <!-- TODO -->
+
+    <!-- Google / Search Console -->
+    <!-- <meta name="google-site-verification" content="your_verification_token" /> -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&display=swap"
+      rel="stylesheet" />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/ress@4.0.0/dist/ress.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- 構造化データ（JSON-LD）: LocalBusiness を簡易で記載 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BarOrPub",
+        "name": "Anela",
+        "alternateName": "アネラ",
+        "brand": {
+          "@type": "Organization",
+          "name": "BOS Co., Ltd."
+        },
+        "url": "https://example.com/",
+        "telephone": "+81-3-xxxx-xxxx" /* TODO: 実電話番号に差し替え */,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "TODO: 住所",
+          "addressLocality": "TODO: 今治市松本町",
+          "addressRegion": "TODO: 愛媛県",
+          "postalCode": "TODO: 郵便番号",
+          "addressCountry": "JP"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "20:00",
+            "closes": "02:00"
+          }
+        ],
+        "priceRange": "¥¥",
+        "image": "https://example.com/og-image.jpg",
+        "description": "Anela (アネラ) is a cozy snack bar offering shochu, whisky, wine, champagne and sake. Reservations via SNS DM or phone."
+      }
+    </script>
+
+    <!-- Analytics / Tag Manager（必要なら差し替え） -->
+    <!-- Google Analytics 4 の gtag 例（コメントアウト） -->
+    <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+  </script>
+  -->
+
+    <!-- カスタムスクリプト -->
+    <!-- <script src="/assets/js/main.js" defer></script> -->
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img src="img/logo.png" alt="ロゴ" class="logo">
+
+        <div class="menu">
+          <nav>
+            <ul>
+              <li><a href="#">Top</a></li>
+              <li><a href="#alcohol">About</a></li>
+              <li><a href="menu.html">Charge</a></li>
+              <li><a href="#contact">Access</a></li>
+            </ul>
+          </nav>
+          <ul class="sns">
+            <li class="instagram">
+              <!-- TODO -->
+              <a href="#">
+                <img src="img/instagram.png" alt="インスタグラム">
+              </a>
+            </li>
+            <li class="tel">
+              <!-- TODO -->
+              <a href="#">
+                <img src="img/tel.png" alt="電話">
+              </a>
+            </li>
+            <li class="tb-instagram">
+              <!-- TODO -->
+              <a href="#">
+                <img src="img/instagram-tb.png" alt="インスタグラム">
+              </a>
+            </li>
+            <li class="tb-tel">
+              <!-- TODO -->
+              <a href="#">
+                <img src="img/tel-tb.png" alt="電話">
+              </a>
+            </li>
+          </ul>
+          <a class="nav-logo" href="#"><img class="img" src="img/nav-logo.png" alt="ロゴ"></a>
+        </div>
+
+        <div class="toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="mask"></div>
+        
+      </div>
+    </header>
+
+    <main id="top" class="top">
+      <div class="mainvisual">
+        <div class="container">
+          <img src="img/fv-1.png" alt="ロゴ" />
+        </div>
+      </div>
+
+      <section id="info" class="info">
+        <div class="wrapper">
+          <h2 class="info-title">~ ご案内 ~</h2>
+
+          <div class="info-block">
+            <h3>営業時間</h3>
+            <p>20:00~26:00</p>
+          </div>
+
+          <div class="info-block">
+            <h3>定休日</h3>
+            <p>日曜・祝日</p>
+          </div>
+
+          <div class="info-block">
+            <h3>ご予約</h3>
+            <p>
+              Instagram DMまたはお電話にて<br />
+              （当日のご予約はお電話のみ）
+            </p>
+            <div class="sns">
+              <a href="#">Instagram</a>
+              <!-- TODO -->
+              ・
+              <a href="tel:00000000000">000-00-0000</a>
+              <!-- TODO -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="alcohol" class="alcohol">
+        <div class="container">
+          <ul class="alcohol-list">
+            <li class="shochu-whisky left">
+              <img class="alcohol-img" src="img/alcohol-1.png" alt="" />
+              <div class="text">
+                <h3><span>Shochu & Whisky</span>焼酎・ウイスキー</h3>
+                <p>
+                  当店では、飲みやすい銘柄から深みのある一本まで、幅広くお楽しみいただけるラインナップをご用意しています。
+                </p>
+                <ul class="feature">
+                  <li class="feature-list">芋・麦・米など定番焼酎を数種類</li>
+                  <li class="feature-list">
+                    ストレートでもロックでも楽しめるウイスキー
+                  </li>
+                  <li class="feature-list">
+                    初めての方にもおすすめの飲みやすいボトル
+                  </li>
+                </ul>
+              </div>
+              <img src="img/frame.png" alt="フレーム" class="frame" />
+            </li>
+
+            <li class="wine-champagne right">
+              <div class="text">
+                <h3><span>Wine & Champagne</span>ワイン・シャンパン</h3>
+                <p>
+                  軽く一杯にも、特別な夜にも。気軽に楽しめるワインとシャンパンをご用意。
+                </p>
+                <ul class="feature">
+                  <li class="feature-list">
+                    赤・白ともにバランスのよい人気銘柄
+                  </li>
+                  <li class="feature-list">
+                    記念日にも選ばれる上品なシャンパン
+                  </li>
+                  <li class="feature-list">甘口・辛口の好みに合わせてご提案</li>
+                </ul>
+              </div>
+              <img class="alcohol-img" src="img/alcohol-2.png" alt="" />
+              <img src="img/frame.png" alt="フレーム" class="frame" />
+            </li>
+
+            <li class="sake left">
+              <img class="alcohol-img" src="img/alcohol-1.png" alt="" />
+              <div class="text">
+                <h3><span>Sake</span>日本酒</h3>
+                <p>
+                  当店では、地元で親しまれる
+                  山丹政宗（やまたんまさむね）を中心に、
+                  香り・キレともに楽しめる日本酒を取り揃えています。
+                </p>
+                <ul class="feature">
+                  <li class="feature-list">
+                    山丹政宗のやわらかな味わいが楽しめる定番の一杯
+                  </li>
+                  <li class="feature-list">
+                    フルーティな香りの銘柄や、キリッとした辛口
+                  </li>
+                  <li class="feature-list">
+                    入荷状況により、有名な人気銘柄が並ぶことも
+                  </li>
+                </ul>
+              </div>
+              <img src="img/frame.png" alt="フレーム" class="frame" />
+            </li>
+          </ul>
+
+          <a href="menu.html" class="link">Charge Info</a>
+        </div>
+      </section>
+
+      <section id="gallery" class="gallery">
+        <div class="wrapper">
+          <h2 class="gallery-title">Gallery</h2>
+          <ul class="gallery-lists">
+            <li><img src="img/gallery-1.png" alt="店内写真" /></li>
+            <li><img src="img/gallery-2.png" alt="店内写真" /></li>
+            <li><img src="img/gallery-1.png" alt="店内写真" /></li>
+            <li><img src="img/gallery-2.png" alt="店内写真" /></li>
+            <li><img src="img/gallery-1.png" alt="店内写真" /></li>
+            <li><img src="img/gallery-2.png" alt="店内写真" /></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="wrapper">  
+          <h2 class="contact-title">Contact</h2>
+          <p>
+            ご予約やご不明点がありましたら、どうぞお気軽にご連絡ください。<br>DMまたはお電話にてお待ちしております。
+          </p>
+          <div class="sns">
+            <a href="#">Instagram</a><!-- TODO -->
+            ・
+            <a href="tel:00000000000">000-00-0000</a><!-- TODO -->
+          </div>
+          <ul class="attention">
+            <li>※当店は 20歳未満の方のご入店・お酒の提供はお断りしております。</li>
+            <li>※営業中は接客のため、DM の返信やお電話の対応にお時間をいただく場合がございます。</li>
+            <li>※営業・勧誘目的のご連絡は一切お断りしております。 何卒ご理解くださいませ。</li>
+          </ul>
+          <p class="address">〒000-0000<br>愛媛県今治市<br>コアセカンドビル3F<!-- TODO --></p>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d732.6457296417109!2d133.00050468338898!3d34.06466674982578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35503a6798965aed%3A0x5548c1adb4c89588!2z44Ki44ON44Op!5e0!3m2!1sja!2sjp!4v1765263034137!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="#">Top</a></li>
+            <li><a href="#alcohol">About</a></li>
+            <li><a href="menu.html">Charge</a></li>
+            <li><a href="#contact">Access</a></li>
+          </ul>
+        </nav>
+        <p>&copy;︎ 2025 BOS Co., Ltd. All Rights Reserved.<br>Anela</p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

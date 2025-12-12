@@ -1,0 +1,146 @@
+@use '_mixin' as m;
+
+#menu {
+  padding-top: 100px;
+
+  .container {
+    text-align: center;
+    position: relative;
+    padding-top: m.$bottom-sp;
+    padding-bottom: m.$bottom;
+
+    .frame-1,
+    .frame-2,
+    .frame-3,
+    .frame-4 {
+      width: 100px;
+      position: absolute;
+    }
+
+    .frame-1,
+    .frame-2 {
+      top: 0;
+    }
+
+    .frame-3,
+    .frame-4 {
+      bottom: 0;
+    }
+
+    .frame-1,
+    .frame-3 {
+      left: 0;
+    }
+
+    .frame-2,
+    .frame-4 {
+      right: 0;
+    }
+
+    .frame-1 {
+      transform: rotate(180deg);
+    }
+
+    .frame-2 {
+      transform: rotate(-90deg);
+    }
+
+    .frame-3 {
+      transform: rotate(90deg);
+    }
+
+    h2 {
+      margin-bottom: m.$bottom-sp;
+    }
+
+    h3 {
+      position: relative;
+      color: m.$font-color;
+      margin-bottom: 32px;
+
+      span {
+        display: inline-block;
+        position: absolute;
+        top: -13px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: m.$fs-small;
+        color: m.$accent-color;
+      }
+    }
+
+    .system {
+      margin-bottom: 96px;
+      .list {
+        .item {
+          display: flex;
+          justify-content: space-between;
+          
+          dt {
+            width: 70%;
+            text-align: left;
+          }
+
+          dd {
+            width: 30%;
+            text-align: right;
+          }
+        }
+      }
+    }
+
+    .category {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 96px;
+
+      @include m.tb {
+        flex-direction: column;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .list {
+        .item {
+          display: flex;
+          justify-content: space-between;
+
+          dt {
+            width: 70%;
+            text-align: left;
+          }
+
+          dd {
+            width: 30%;
+            text-align: right;
+          }
+        }
+      }
+
+      .left {
+        width: 50%;
+        margin-right: 48px;
+
+        @include m.tb {
+          width: 100%;
+          margin-bottom: 96px;
+        }
+
+        h4 {
+          text-align: left;
+          font-size: 2rem;
+        }
+      }
+
+      .right {
+        width: 50%;
+
+        @include m.tb {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

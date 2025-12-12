@@ -1,0 +1,46 @@
+
+$tb: 900px;
+$sp: 430px;
+
+@mixin tb {
+  @media (max-width: ($tb)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+// font-------------------------------------
+$fs-middle: 2.4rem;
+$fs-small: 1.2rem;
+
+// 文字の太さ
+$fw-medium: 600;
+$fw-light: 400;
+// -----------------------------------------
+
+$base-color: #054E70;      // ベースカラー
+$accent-color: #BC9973;    // アクセントカラー
+$font-color: #FFFFFF;      // フォントカラー
+
+
+$padding: 15px;     // ps.padding-inline
+$bottom: 96px;     // pcセクション間隔
+$bottom-sp: 48px;   // セクションタイトル下・spセクション間隔
+
+
+$shadow: 0px 4px 8px 5px rgba(0, 0, 0, 0.25);// box-shadow
+
+
+// -------------------------------------------
+// z-index
+
+// header 1000
+// toggle 1100
+// nav 1100
+// mask 1050
+// -------------------------------------------

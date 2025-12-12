@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- 基本メタ -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no,email=no,address=no" />
+
+    <!-- ページタイトル（各ページで動的に差し替えてください） -->
+    <title>アネラ — 隠れ家スナック | Anela</title>
+    <meta
+      name="description"
+      content="アネラ（Anela）は落ち着いた大人のためのスナックです。焼酎・ウイスキー・ワイン・シャンパン・日本酒（山丹政宗 ほか）を取り揃えております。ご予約はSNS DMまたはお電話で承ります。" />
+
+    <!-- keywordsは必須ではないが簡易的に -->
+    <meta
+      name="keywords"
+      content="スナック, アネラ, Anela, 焼酎, ウイスキー, ワイン, シャンパン, 日本酒, 山丹政宗, 愛媛スナック" />
+    <meta name="author" content="BOS Co., Ltd." />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://example.com/" />
+    <!-- TODO: 実サイトのURLに差し替え -->
+
+    <!-- Favicon / Manifest -->
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- テーマカラー -->
+    <meta name="theme-color" content="#066C9C" />
+
+    <!-- Open Graph (SNSでの共有用) -->
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Anela (アネラ)" />
+    <meta property="og:title" content="アネラ — 大人の隠れ家スナック | Anela" />
+    <meta
+      property="og:description"
+      content="落ち着いた大人のためのスナック。焼酎・ウイスキー・ワイン・シャンパン・日本酒（山丹政宗 ほか）をご用意しています。" />
+    <meta property="og:url" content="https://example.com/" />
+    <!-- TODO -->
+    <meta property="og:image" content="https://example.com/og-image.jpg" />
+    <!-- TODO: 推奨 1200x630px -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@your_twitter" />
+    <!-- TODO: あれば差し替え -->
+    <meta name="twitter:title" content="アネラ — 大人の隠れ家スナック" />
+    <meta
+      name="twitter:description"
+      content="焼酎・ウイスキー・ワイン・シャンパン・日本酒（山丹政宗 ほか）を取り揃えています。" />
+    <meta
+      name="twitter:image"
+      content="https://example.com/twitter-image.jpg" />
+    <!-- TODO -->
+
+    <!-- Google / Search Console -->
+    <!-- <meta name="google-site-verification" content="your_verification_token" /> -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&display=swap"
+      rel="stylesheet" />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/ress@4.0.0/dist/ress.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- 構造化データ（JSON-LD）: LocalBusiness を簡易で記載 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BarOrPub",
+        "name": "Anela",
+        "alternateName": "アネラ",
+        "brand": {
+          "@type": "Organization",
+          "name": "BOS Co., Ltd."
+        },
+        "url": "https://example.com/",
+        "telephone": "+81-3-xxxx-xxxx" /* TODO: 実電話番号に差し替え */,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "TODO: 住所",
+          "addressLocality": "TODO: 今治市松本町",
+          "addressRegion": "TODO: 愛媛県",
+          "postalCode": "TODO: 郵便番号",
+          "addressCountry": "JP"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "20:00",
+            "closes": "02:00"
+          }
+        ],
+        "priceRange": "¥¥",
+        "image": "https://example.com/og-image.jpg",
+        "description": "Anela (アネラ) is a cozy snack bar offering shochu, whisky, wine, champagne and sake. Reservations via SNS DM or phone."
+      }
+    </script>
+
+    <!-- Analytics / Tag Manager（必要なら差し替え） -->
+    <!-- Google Analytics 4 の gtag 例（コメントアウト） -->
+    <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+  </script>
+  -->
+
+    <!-- カスタムスクリプト -->
+    <!-- <script src="/assets/js/main.js" defer></script> -->
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img src="img/logo.png" alt="ロゴ" class="logo">
+
+        <div class="menu">
+          <nav>
+            <ul>
+              <li><a href="index.html">Top</a></li>
+              <li><a href="#alcohol">About</a></li>
+              <li><a href="menu.html">Charge</a></li>
+              <li><a href="#contact">Access</a></li>
+              <li class="nav-logo"><a href="#"><img src="img/nav-logo.png" alt="ロゴ"></a></li>
+            </ul>
+          </nav>
+          <ul class="sns">
+            <li class="instagram">
+              <!-- TODO -->
+              <a href="#">
+                <img src="img/instagram.png" alt="インスタグラム">
+              </a>
+            </li>
+            <li class="tel">
+              <!-- TODO -->
+              <a href="#">
+                <img src="img/tel.png" alt="電話">
+              </a>
+            </li>
+            <li class="tb-instagram">
+              <!-- TODO -->
+              <a href="#">
+                <img src="img/instagram.png" alt="インスタグラム">
+              </a>
+            </li>
+            <li class="tb-tel">
+              <!-- TODO -->
+              <a href="#">
+                <img src="img/tel.png" alt="電話">
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="mask"></div>
+        
+      </div>
+    </header>
+
+    <main id="menu" class="menu">
+      
+      <section class="alcohol-menu">
+        <div class="container">
+          <h2>MENU</h2>
+
+          <img src="img/frame.png" alt="フレーム" class="frame-1">
+          <img src="img/frame.png" alt="フレーム" class="frame-2">
+
+
+          <div class="wrapper">
+
+            <div class="system">
+              <h3><span>System</span>システム</h3>
+              <dl class="list">
+                <div class="item">
+                  <dt>・Seat Charge ( No time limit )</dt>
+                  <dd>¥ 2,500 -</dd>
+                </div>
+                <div class="item">
+                  <dt>・Free Drink ( 60 min )</dt>
+                  <dd>¥ 5,000 -</dd>
+                </div>
+              </dl>
+            </div>
+            
+            <div class="category shochu-whisky">
+
+              <div class="shochu left">
+                <h3><span>Shochu</span>焼酎</h3>
+                <h4>麦</h4>
+                <dl class="list">
+                  <div class="item">
+                    <dt>・吉四六</dt>
+                    <dd>¥ 6,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・いいちこ</dt>
+                    <dd>¥ 4,000 -</dd>
+                  </div>
+                </dl>
+                <h4>芋</h4>
+                <dl class="list">
+                  <div class="item">
+                    <dt>・魔王</dt>
+                    <dd>¥ 10,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・三岳</dt>
+                    <dd>¥ 6,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・黒霧島</dt>
+                    <dd>¥ 4,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・赤霧島</dt>
+                    <dd>¥ 5,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・だいやめ</dt>
+                    <dd>¥ 4,000 -</dd>
+                  </div>
+                </dl>
+              </div>
+              
+              <div class="whisky right">
+                <h3><span>Whisky</span>ウイスキー</h3>
+                <dl class="list">
+                  <div class="item">
+                    <dt>・山崎12年</dt>
+                    <dd>¥ 60,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・山崎</dt>
+                    <dd>¥ 40,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・マッカラン</dt>
+                    <dd>¥ 40,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・響</dt>
+                    <dd>¥ 45,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・白州</dt>
+                    <dd>¥ 35,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・知多</dt>
+                    <dd>¥ 17,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・リザーブ</dt>
+                    <dd>¥ 10,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・ジャックダニエル</dt>
+                    <dd>¥ 10,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・角瓶</dt>
+                    <dd>¥ 5,000 -</dd>
+                  </div>
+                </dl>
+              </div>
+
+            </div>
+
+            <div class="category wine-champagne">
+
+              <div class="wine left">
+                <h3><span>Wine</span>ワイン</h3>
+                <dl class="list">
+                  <div class="item">
+                    <dt>・赤</dt>
+                    <dd>¥ 10,000 ~</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・白</dt>
+                    <dd>¥ 10,000 ~</dd>
+                  </div>
+                </dl>
+              </div>
+              
+              <div class="champagne right">
+                <h3><span>Champagne</span>シャンパン</h3>
+                <dl class="list">
+                  <div class="item">
+                    <dt>・ドンペリ ピンク</dt>
+                    <dd>¥ 100,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・べルエポック ロゼ</dt>
+                    <dd>¥ 100,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・ベルエポック 白</dt>
+                    <dd>¥ 70,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・ソウメイ</dt>
+                    <dd>¥ 60,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・モエネク</dt>
+                    <dd>¥ 40,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・モエ 白</dt>
+                    <dd>¥ 22,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・ヴーヴ クリコ ロゼ</dt>
+                    <dd>¥ 40,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・ヴーヴ クリコ</dt>
+                    <dd>¥ 30,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・バロン</dt>
+                    <dd>¥ 30,000 -</dd>
+                  </div>
+                </dl>
+              </div>
+
+            </div>
+
+            <div class="category sake-other">
+
+              <div class="sake left">
+                <h3><span>Sake</span>日本酒</h3>
+                <dl class="list">
+                  <div class="item">
+                    <dt>・山丹政宗 ( 300 ml )</dt>
+                    <dd>¥ 1,500 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・石鎚 ( 750 ml )</dt>
+                    <dd>¥ 5,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・熱燗 ( 1合 )</dt>
+                    <dd>¥ 1,000 -</dd>
+                  </div>
+                </dl>
+              </div>
+
+              <div class="other right">
+                <h3><span>Other</span>その他</h3>
+                <dl class="list">
+                  <div class="item">
+                    <dt>・ビール</dt>
+                    <dd>¥ 1,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・カクテル 各種</dt>
+                    <dd>¥ 1,000 -</dd>
+                  </div>
+                  <div class="item">
+                    <dt>・ソフトドリンク 各種</dt>
+                    <dd>¥ 1,000 -</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            
+          </div>
+          
+          <img src="img/frame.png" alt="フレーム" class="frame-3">
+          <img src="img/frame.png" alt="フレーム" class="frame-4">
+
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="wrapper">  
+          <h2 class="contact-title">Contact</h2>
+          <p>
+            ご予約やご不明点がありましたら、どうぞお気軽にご連絡ください。<br>DMまたはお電話にてお待ちしております。
+          </p>
+          <div class="sns">
+            <a href="#">Instagram</a><!-- TODO -->
+            ・
+            <a href="tel:00000000000">000-00-0000</a><!-- TODO -->
+          </div>
+          <ul class="attention">
+            <li>※当店は 20歳未満の方のご入店・お酒の提供はお断りしております。</li>
+            <li>※営業中は接客のため、DM の返信やお電話の対応にお時間をいただく場合がございます。</li>
+            <li>※営業・勧誘目的のご連絡は一切お断りしております。 何卒ご理解くださいませ。</li>
+          </ul>
+          <p class="address">〒000-0000<br>愛媛県今治市<br>コアセカンドビル3F<!-- TODO --></p>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d732.6457296417109!2d133.00050468338898!3d34.06466674982578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35503a6798965aed%3A0x5548c1adb4c89588!2z44Ki44ON44Op!5e0!3m2!1sja!2sjp!4v1765263034137!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="#">Top</a></li>
+            <li><a href="#alcohol">About</a></li>
+            <li><a href="menu.html">Charge</a></li><!-- TODO -->
+            <li><a href="#contact">Access</a></li>
+          </ul>
+        </nav>
+        <p>&copy;︎ 2025 BOS Co., Ltd. All Rights Reserved.<br>Anela</p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
