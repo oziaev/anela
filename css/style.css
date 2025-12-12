@@ -118,6 +118,13 @@ header {
   padding-inline: 15px;
   z-index: 1000;
 }
+@media (max-width: 900px) {
+  header {
+    width: 200px;
+    left: auto;
+    right: 0;
+  }
+}
 header .container {
   width: 100%;
   height: 100%;
@@ -131,6 +138,11 @@ header .container {
 header .container .logo {
   width: 60px;
 }
+@media (max-width: 900px) {
+  header .container .logo {
+    display: none;
+  }
+}
 header .container .menu {
   display: flex;
   justify-content: space-between;
@@ -138,13 +150,8 @@ header .container .menu {
 }
 @media (max-width: 900px) {
   header .container .menu {
-    width: 50%;
     flex-direction: column;
     margin-left: auto;
-    position: fixed;
-    top: 10%;
-    right: 5%;
-    z-index: 1100;
   }
 }
 header .container .menu nav {
@@ -182,6 +189,11 @@ header .container .menu nav ul li a:hover {
   color: #054E70;
 }
 @media (max-width: 900px) {
+  header .container .menu nav ul li a:hover {
+    opacity: 0.5;
+  }
+}
+@media (max-width: 900px) {
   header .container .menu nav ul li a {
     color: #054E70;
   }
@@ -194,29 +206,23 @@ header .container .menu .sns {
 header .container .menu .sns li {
   width: 20px;
   line-height: 0;
+  transition: 0.3s ease;
   margin-right: 16px;
 }
 header .container .menu .sns li:last-child {
   margin-right: 0;
 }
-@media (max-width: 900px) {
-  header .container .menu .sns .instagram,
-  header .container .menu .sns .tel {
-    display: none;
-  }
+header .container .menu .sns li:hover {
+  opacity: 0.5;
 }
 header .container .menu .sns .tb-instagram,
 header .container .menu .sns .tb-tel {
   display: none;
 }
-@media (max-width: 900px) {
-  header .container .menu .sns .tb-instagram,
-  header .container .menu .sns .tb-tel {
-    display: block;
-  }
-}
 header .container .menu .nav-logo {
+  width: 80%;
   display: none;
+  margin-top: 24px;
 }
 header .container .toggle {
   width: 30px;
@@ -230,6 +236,12 @@ header .container .toggle {
   header .container .toggle {
     display: block;
   }
+}
+header .container .toggle:hover span:nth-child(1) {
+  width: 100%;
+}
+header .container .toggle:hover span:nth-child(2) {
+  width: 100%;
 }
 header .container .toggle span {
   height: 1px;
@@ -254,7 +266,7 @@ header .container .toggle span:nth-child(3) {
   bottom: 30%;
 }
 header .container .mask {
-  width: 50%;
+  width: 350px;
   height: 500px;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 30px;
@@ -264,7 +276,40 @@ header .container .mask {
   display: none;
   z-index: 1050;
 }
+@media (max-width: 430px) {
+  header .container .mask {
+    width: 200px;
+    height: 400px;
+  }
+}
+header.active .menu {
+  width: 350px;
+  position: fixed;
+  top: 10%;
+  right: 2.5%;
+  z-index: 1100;
+}
+@media (max-width: 430px) {
+  header.active .menu {
+    width: 200px;
+  }
+}
 header.active .menu nav {
+  display: block;
+}
+@media (max-width: 900px) {
+  header.active .menu nav {
+    margin-right: 0;
+  }
+}
+@media (max-width: 900px) {
+  header.active .menu .sns .instagram,
+  header.active .menu .sns .tel {
+    display: none;
+  }
+}
+header.active .menu .sns .tb-instagram,
+header.active .menu .sns .tb-tel {
   display: block;
 }
 header.active .menu .nav-logo {
@@ -274,6 +319,9 @@ header.active .toggle {
   position: absolute;
   top: 10%;
   right: 10%;
+}
+header.active .toggle:hover span {
+  opacity: 0.5;
 }
 header.active .toggle span {
   background-color: #054E70;
