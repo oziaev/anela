@@ -5,7 +5,6 @@ $(function () {
   // --------------------------------
   const header = document.querySelector("header");
   const toggle = document.querySelector(".toggle");
-  const mask = document.querySelector(".mask");
 
   toggle.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -28,6 +27,8 @@ $(function () {
   // スムーススクロール
   // --------------------------------
   $('a[href^="#"]').click(function () {
+    closeMenu();
+    
     let href = $(this).attr("href");
     let target = $(href === "#" || href === "" ? "html" : href);
     
@@ -43,5 +44,30 @@ $(function () {
     
     return false;
   });
+  // --------------------------------
+  // ファーストビュー
+  // アネラ英文字
+  // --------------------------------
+  const text = document.querySelector(".fv-name-en");
+  const chars = text.textContent.split("");
+
+  text.textContent = "";
+
+  chars.forEach((char, index) => {
+    const span = document.createElement("span");
+    span.textContent = char;
+    span.style.animationDelay = `${index * 0.3}s`;
+    text.appendChild(span);
+  });
+  // --------------------------------
+  // アネラ画像
+  // --------------------------------
+  window.addEventListener("load", () => {
+    const fvImg = document.querySelector(".fv-2");
+    if (fvImg) {
+      fvImg.classList.add("is-show");
+    }
+  });
+  // --------------------------------
   
 });
