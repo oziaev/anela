@@ -28,6 +28,7 @@ header {
 
     .logo {
       width: 60px;
+      line-height: 0;
 
       @include m.tb {
         display: none;
@@ -120,6 +121,7 @@ header {
         width: 80%;
         display: none;
         margin-top: 24px;
+        margin-inline: auto;
       }
     }
 
@@ -149,6 +151,7 @@ header {
 
       span {
         height: 1px;
+        border-radius: 1px;
         background-color: m.$font-color;
         transition: 0.3s ease;
         position: absolute;
@@ -157,17 +160,20 @@ header {
           width: 15px;
           top: 30%;
           right: 0;
+          animation: toggle-bar-01 .75s forwards;
         }
         &:nth-child(2) {
           width: 20px;
           top: 50%;
           transform: translateY(-50%);
           right: 0;
+          opacity: 1;
         }
         &:nth-child(3) {
           width: 100%;
           right: 0;
-          bottom: 30%;
+          top: 70%;
+          animation: toggle-bar-03 .75s forwards;
         }
       }
     }
@@ -195,7 +201,7 @@ header {
       width: 350px;
       position: fixed;
       top: 10%;
-      right: 2.5%;
+      right: 2%;
       z-index: 1100;
 
       @include m.sp {
@@ -231,8 +237,8 @@ header {
 
     .toggle {
       position: absolute;
-      top: 10%;
-      right: 10%;
+      top: 30%;
+      right: 20%;
 
       &:hover {
         span {
@@ -244,17 +250,15 @@ header {
         background-color: m.$base-color;
         &:nth-child(1) {
           width: 100%;
-          transform: rotate(45deg);
-          top: 50%;
+          animation: active-bar-01 .75s forwards;
         }
-
+        
         &:nth-child(2) {
-          display: none;
+          opacity: 0;
         }
-
+        
         &:nth-child(3) {
-          transform: rotate(-45deg);
-          top: 50%;
+          animation: active-bar-03 .75s forwards;
         }
       }
     }
@@ -262,5 +266,62 @@ header {
     .mask {
       display: block;
     }
+  }
+}
+
+// toggle-bar  animation
+@keyframes toggle-bar-01 {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0);
+    top: 50%;
+  }
+  100% {
+    transform: rotate(0);
+    top: 30%;
+  }
+}
+@keyframes toggle-bar-03 {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(0);
+    top: 50%;
+  }
+  100% {
+    transform: rotate(0);
+    top: 70%;
+  }
+}
+
+// active-bar  animation
+@keyframes active-bar-01 {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(0);
+    top: 50%;
+  }
+  100% {
+    transform: rotate(45deg);
+    top: 50%;
+  }
+}
+
+@keyframes active-bar-03 {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(0);
+    top: 50%;
+  }
+  100% {
+    transform: rotate(-45deg);
+    top: 50%;
   }
 }

@@ -3,12 +3,77 @@
 #top {
 
   .mainvisual {
-    height: calc(100vh - 100px);
-    margin-top: 100px;
+    height: calc(100vh - 50px);
+    margin-top: 50px;
 
     @include m.tb {
       height: calc(50vh - 100px);
-      margin-bottom: m.$bottom-sp;
+    }
+
+    .container {
+      height: 100%;
+      text-align: center;
+      position: relative;
+
+      img {
+        width: 700px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+
+        @include m.tb {
+          width: 430px;
+        }
+
+        @include m.sp {
+          width: 250px;
+        }
+      }
+
+      .fv-1 {
+        opacity: 0;
+        animation: fadeUp-fv1 2.5s ease forwards;
+
+      }
+      
+      .fv-2 {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+        transition: clip-path 2s cubic-bezier(0.37, 0, 0.63, 1),opacity 0.6s ease;
+
+        &.is-show {
+          opacity: 1;
+          clip-path: inset(0 0 0 0);
+        }
+      }
+
+      .fv-name-en {
+        font-size: 3.2rem;
+        filter: blur(0.7px);
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include m.tb {
+          font-size: 2.4rem;
+          filter: blur(0.3px);
+          top: 20%;
+        }
+
+        @include m.sp {
+          font-size: 1.6rem;
+          filter: blur(0.3px);
+          top: 35%;
+        }
+
+        span {
+          display: inline-block;
+          opacity: 0;
+          animation: fadeUp 1s ease forwards;
+        }
+      }
     }
   }
 
@@ -79,7 +144,7 @@
           background-color: rgba(5, 78, 112, .8);
           position: absolute;
           top: 20%;
-          padding: 32px 48px;
+          padding: 40px 48px;
 
           @include m.tb {
             width: 80%;
@@ -224,9 +289,27 @@
   }
 }
 
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp-fv1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes arrowFlow {
   0% {
-    transform: translate(-100px, -50%); /* 左外から */
+    transform: translate(-100px, -50%);
     opacity: 0;
   }
   30% {
@@ -236,7 +319,7 @@
     opacity: 1;
   }
   100% {
-    transform: translate(40px, -50%);  /* 右の外へ */
+    transform: translate(40px, -50%);
     opacity: 0;
   }
 }

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -137,6 +136,7 @@ header .container {
 }
 header .container .logo {
   width: 60px;
+  line-height: 0;
 }
 @media (max-width: 900px) {
   header .container .logo {
@@ -223,6 +223,7 @@ header .container .menu .nav-logo {
   width: 80%;
   display: none;
   margin-top: 24px;
+  margin-inline: auto;
 }
 header .container .toggle {
   width: 30px;
@@ -245,6 +246,7 @@ header .container .toggle:hover span:nth-child(2) {
 }
 header .container .toggle span {
   height: 1px;
+  border-radius: 1px;
   background-color: #FFFFFF;
   transition: 0.3s ease;
   position: absolute;
@@ -253,17 +255,20 @@ header .container .toggle span:nth-child(1) {
   width: 15px;
   top: 30%;
   right: 0;
+  animation: toggle-bar-01 0.75s forwards;
 }
 header .container .toggle span:nth-child(2) {
   width: 20px;
   top: 50%;
   transform: translateY(-50%);
   right: 0;
+  opacity: 1;
 }
 header .container .toggle span:nth-child(3) {
   width: 100%;
   right: 0;
-  bottom: 30%;
+  top: 70%;
+  animation: toggle-bar-03 0.75s forwards;
 }
 header .container .mask {
   width: 350px;
@@ -286,7 +291,7 @@ header.active .menu {
   width: 350px;
   position: fixed;
   top: 10%;
-  right: 2.5%;
+  right: 2%;
   z-index: 1100;
 }
 @media (max-width: 430px) {
@@ -317,8 +322,8 @@ header.active .menu .nav-logo {
 }
 header.active .toggle {
   position: absolute;
-  top: 10%;
-  right: 10%;
+  top: 30%;
+  right: 20%;
 }
 header.active .toggle:hover span {
   opacity: 0.5;
@@ -328,20 +333,70 @@ header.active .toggle span {
 }
 header.active .toggle span:nth-child(1) {
   width: 100%;
-  transform: rotate(45deg);
-  top: 50%;
+  animation: active-bar-01 0.75s forwards;
 }
 header.active .toggle span:nth-child(2) {
-  display: none;
+  opacity: 0;
 }
 header.active .toggle span:nth-child(3) {
-  transform: rotate(-45deg);
-  top: 50%;
+  animation: active-bar-03 0.75s forwards;
 }
 header.active .mask {
   display: block;
 }
 
+@keyframes toggle-bar-01 {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0);
+    top: 50%;
+  }
+  100% {
+    transform: rotate(0);
+    top: 30%;
+  }
+}
+@keyframes toggle-bar-03 {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(0);
+    top: 50%;
+  }
+  100% {
+    transform: rotate(0);
+    top: 70%;
+  }
+}
+@keyframes active-bar-01 {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(0);
+    top: 50%;
+  }
+  100% {
+    transform: rotate(45deg);
+    top: 50%;
+  }
+}
+@keyframes active-bar-03 {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(0);
+    top: 50%;
+  }
+  100% {
+    transform: rotate(-45deg);
+    top: 50%;
+  }
+}
 footer {
   text-align: right;
   padding: 32px 0;
@@ -354,14 +409,75 @@ footer p {
 }
 
 #top .mainvisual {
-  height: calc(100vh - 100px);
-  margin-top: 100px;
+  height: calc(100vh - 50px);
+  margin-top: 50px;
 }
 @media (max-width: 900px) {
   #top .mainvisual {
     height: calc(50vh - 100px);
-    margin-bottom: 48px;
   }
+}
+#top .mainvisual .container {
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+#top .mainvisual .container img {
+  width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+@media (max-width: 900px) {
+  #top .mainvisual .container img {
+    width: 430px;
+  }
+}
+@media (max-width: 430px) {
+  #top .mainvisual .container img {
+    width: 250px;
+  }
+}
+#top .mainvisual .container .fv-1 {
+  opacity: 0;
+  animation: fadeUp-fv1 2.5s ease forwards;
+}
+#top .mainvisual .container .fv-2 {
+  opacity: 0;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 2s cubic-bezier(0.37, 0, 0.63, 1), opacity 0.6s ease;
+}
+#top .mainvisual .container .fv-2.is-show {
+  opacity: 1;
+  clip-path: inset(0 0 0 0);
+}
+#top .mainvisual .container .fv-name-en {
+  font-size: 3.2rem;
+  filter: blur(0.7px);
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 900px) {
+  #top .mainvisual .container .fv-name-en {
+    font-size: 2.4rem;
+    filter: blur(0.3px);
+    top: 20%;
+  }
+}
+@media (max-width: 430px) {
+  #top .mainvisual .container .fv-name-en {
+    font-size: 1.6rem;
+    filter: blur(0.3px);
+    top: 35%;
+  }
+}
+#top .mainvisual .container .fv-name-en span {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
 }
 #top #info {
   text-align: center;
@@ -431,7 +547,7 @@ footer p {
   background-color: rgba(5, 78, 112, 0.8);
   position: absolute;
   top: 20%;
-  padding: 32px 48px;
+  padding: 40px 48px;
 }
 @media (max-width: 900px) {
   #top #alcohol .alcohol-list .left .text,
@@ -563,9 +679,25 @@ footer p {
   transition: 0.3s ease;
 }
 
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeUp-fv1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes arrowFlow {
   0% {
-    transform: translate(-100px, -50%); /* 左外から */
+    transform: translate(-100px, -50%);
     opacity: 0;
   }
   30% {
@@ -575,7 +707,7 @@ footer p {
     opacity: 1;
   }
   100% {
-    transform: translate(40px, -50%); /* 右の外へ */
+    transform: translate(40px, -50%);
     opacity: 0;
   }
 }
