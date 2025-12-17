@@ -10,6 +10,10 @@
       height: calc(50vh - 100px);
     }
 
+    @include m.sp {
+      margin-top: 96px;
+    }
+
     .container {
       height: 100%;
       text-align: center;
@@ -27,7 +31,7 @@
         }
 
         @include m.sp {
-          width: 250px;
+          width: 270px;
         }
       }
 
@@ -64,7 +68,7 @@
 
         @include m.sp {
           font-size: 1.6rem;
-          filter: blur(0.3px);
+          filter: blur(0px);
           top: 35%;
         }
 
@@ -72,6 +76,49 @@
           display: inline-block;
           opacity: 0;
           animation: fadeUp 1s ease forwards;
+        }
+      }
+    }
+
+    .scrollbar_box {
+      position: absolute;
+      left: 20px;
+      bottom: 10px;
+
+      @include m.tb {
+        display: none;
+      }
+
+      .scrollbar-text {
+        display: inline-block;
+        color: m.$font-color;
+        font-size: m.$fs-small;
+        writing-mode: vertical-lr;
+        transform: translateX(-40%);
+        padding: 10px 10px 50px;
+      }
+
+      .scrollbar {        
+        &::after {
+          width: .5px;
+          height: 50px;
+          content: "";
+          background: m.$font-color;
+          position: absolute;
+          left: 3px;
+          bottom: 0;
+        }
+
+        &::before {
+          width: 8px;
+          height: 8px;
+          content: "";
+          position: absolute;
+          left: -1px;
+          bottom: 0;
+          border-radius: 50%;
+          background: m.$font-color;
+          animation: circlemove 3s ease-in-out infinite, cirlemovehide 3s ease-out infinite;
         }
       }
     }
@@ -92,11 +139,19 @@
       }
 
       .info-block {
-        margin-bottom: 24px;
+        margin-bottom: 32px;
 
         h3 {
           font-size: 1.8rem;
           margin-bottom: 16px;
+        }
+
+        p {
+          span {
+            display: inline-block;
+            font-size: m.$fs-small;
+            color: m.$accent-color;
+          }
         }
 
         .sns {
@@ -231,7 +286,9 @@
           }
 
           @include m.sp {
-            transform: rotate(-90deg);
+            left: 0;
+            right: auto;
+            transform: rotate(-180deg);
           }
         }
       }
@@ -240,20 +297,31 @@
     .link {
       position: relative;
       overflow: hidden;
+      padding: 10px;
       
       &:hover::after {
         background-color: m.$accent-color;
       }
       
       &::after {
-        width: 40px;
-        height: 1px;
-        background-color: m.$font-color;
-        transition: .5s ease;
+        width: 95px;
+        height: .5px;
         content: "";
         position: absolute;
-        bottom: 0;
-        animation: arrowFlow 2s linear infinite;
+        left: 10px;
+        bottom: 6px;
+        background-color: m.$font-color;
+      }
+
+      &::before {
+        width: 8px;
+        height: 8px;
+        content: "";
+        position: absolute;
+        bottom: 2.5px;
+        background-color: m.$font-color;
+        border-radius: 50%;
+        animation: circlemove-2 3s ease-in-out infinite, cirlemovehide-2 3s ease-out infinite;
       }
     }
   }
@@ -307,19 +375,67 @@
   }
 }
 
-@keyframes arrowFlow {
+@keyframes circlemove {
   0% {
-    transform: translate(-100px, -50%);
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
+    bottom: 45px;
   }
   100% {
-    transform: translate(40px, -50%);
+    bottom: 0px;
+  }
+}
+
+@keyframes cirlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
     opacity: 0;
   }
 }
+
+@keyframes circlemove-2 {
+  0% {
+    left: 10px;
+  }
+  100% {
+    left: 90px;
+  }
+}
+
+@keyframes cirlemovehide-2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+// @keyframes arrowFlow {
+//   0% {
+//     transform: translate(-100px, -50%);
+//     opacity: 0;
+//   }
+//   30% {
+//     opacity: 1;
+//   }
+//   70% {
+//     opacity: 1;
+//   }
+//   100% {
+//     transform: translate(40px, -50%);
+//     opacity: 0;
+//   }
+// }
