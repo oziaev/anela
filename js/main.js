@@ -69,5 +69,23 @@ $(function () {
     }
   });
   // --------------------------------
+  // --------------------------------
+  function fadeInOnScroll() {
+    $(".fadein").each(function () {
+      const elemTop = $(this).offset().top;
+      const scroll = $(window).scrollTop();
+      const windowHeight = $(window).height();
+
+      if(scroll > elemTop - windowHeight + 100) {
+        $(this).addClass("active");
+      }
+    });
+  }
+
+  fadeInOnScroll();
+
+  $(window).on("scroll", fadeInOnScroll);
+  // --------------------------------
+  // --------------------------------
   
 });

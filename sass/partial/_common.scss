@@ -108,6 +108,18 @@ h3 {
   }
 }
 
+// ハンバーガー開いてる時
 .no-scroll {
   overflow: hidden;
+}
+
+.fadein {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 1.5s ease;
+
+    &.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
