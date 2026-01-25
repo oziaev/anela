@@ -1,9 +1,23 @@
 
+$pc-sm: 1270px;
 $tb: 900px;
+$tb-sm: 600px;
 $sp: 430px;
+
+@mixin pc-sm {
+  @media (max-width: ($pc-sm)) {
+    @content;
+  }
+}
 
 @mixin tb {
   @media (max-width: ($tb)) {
+    @content;
+  }
+}
+
+@mixin tb-sm {
+  @media (max-width: ($tb-sm)) {
     @content;
   }
 }
@@ -25,7 +39,7 @@ $fw-light: 400;
 
 $base-color: #054E70;      // ベースカラー
 $accent-color: #BC9973;    // アクセントカラー
-$font-color: #FFFFFF;      // フォントカラー
+$font-color: #ffffff;      // フォントカラー
 
 
 $padding: 15px;     // ps.padding-inline

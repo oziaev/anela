@@ -3,6 +3,14 @@
 @use 'partial/_common.scss';
 @use 'partial/_header.scss';
 @use 'partial/_footer.scss';
+@use 'partial/_access.scss';
 
-@use 'partial/_top.scss';
+// トップセクション
+@use 'partial/_mainvisual.scss';
+@use 'partial/_info.scss';
+@use 'partial/_pagelink.scss';
+@use 'partial/_gallery.scss';
+
 @use 'partial/_menu.scss';
+@use 'partial/_castwanted.scss';
+@use 'partial/_contact.scss';

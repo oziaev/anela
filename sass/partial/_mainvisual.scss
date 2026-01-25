@@ -1,0 +1,219 @@
+@use "mixin" as m;
+
+.mainvisual {
+  height: 100vh;
+  background-image: url(/img/mainvisual.jpg);
+  background-size: cover;
+  background-position: 40% center;
+  margin-bottom: m.$bottom;
+
+  @include m.tb {
+    height: 50vh;
+  }
+  
+  @include m.sp {
+    margin-bottom: m.$bottom-sp;
+  }
+
+  .container {
+    height: 100%;
+    text-align: center;
+    position: relative;
+
+    img {
+      width: 650px;
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      transform: translateX(-50%) translateY(-50%);
+
+      @include m.pc-sm {
+        width: 630px;
+        left: 35%;
+      }
+
+      @include m.tb {
+        width: 350px;
+        left: 30%;
+      }
+
+      @include m.tb-sm {
+        left: 50%;
+      }
+
+      @include m.sp {
+        width: 270px;
+      }
+    }
+
+    .fv-1 {
+      opacity: 0;
+      animation: fadeUp-fv1 2.5s ease forwards;
+    }
+
+    .fv-2 {
+      opacity: 0;
+      clip-path: inset(0 100% 0 0);
+      transition:
+        clip-path 2s cubic-bezier(0.37, 0, 0.63, 1),
+        opacity 0.6s ease;
+
+      &.is-show {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+      }
+    }
+
+    .fv-name-en {
+      font-size: 3.2rem;
+      filter: blur(0.7px);
+      position: absolute;
+      top: 40%;
+      left: 25%;
+      transform: translateX(-50%);
+
+      @include m.pc-sm {
+        left: 35%;
+      }
+      
+      @include m.tb {
+        font-size: 2rem;
+        filter: blur(0.3px);
+        top: 35%;
+        left: 30%;
+      }
+
+      @include m.tb-sm {
+        top: 39%;
+        left: 50%;
+      }
+      
+      @include m.sp {
+        font-size: 1.6rem;
+        filter: blur(0px);
+      }
+      
+      span {
+        display: inline-block;
+        opacity: 0;
+        animation: fadeUp 1s ease forwards;
+      }
+    }
+    
+    .open {
+      font-size: 1.6rem;
+      filter: blur(0.5px);
+      position: absolute;
+      top: 65%;
+      left: 18%;
+      
+      @include m.pc-sm {
+        left: 28%;
+      }
+      
+      @include m.tb {
+        font-size: 1.4rem;
+        filter: blur(0px);
+        top: 70%;
+        left: 21%;
+      }
+      
+      @include m.tb-sm {
+        top: 67%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      @include m.sp {
+        font-size: 1.2rem;
+      }      
+    }
+  }
+
+  .scrollbar_box {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+
+    @include m.tb {
+      display: none;
+    }
+
+    .scrollbar-text {
+      display: inline-block;
+      color: m.$font-color;
+      font-size: m.$fs-small;
+      writing-mode: vertical-lr;
+      transform: translateX(-40%);
+      padding: 10px 10px 50px;
+    }
+
+    .scrollbar {
+      &::after {
+        width: 0.5px;
+        height: 50px;
+        content: "";
+        background: m.$font-color;
+        position: absolute;
+        left: 3px;
+        bottom: 0;
+      }
+
+      &::before {
+        width: 8px;
+        height: 8px;
+        content: "";
+        position: absolute;
+        left: -1px;
+        bottom: 0;
+        border-radius: 50%;
+        background: m.$font-color;
+        animation:
+          circlemove 3s ease-in-out infinite,
+          cirlemovehide 3s ease-out infinite;
+      }
+    }
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp-fv1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes circlemove {
+  0% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@keyframes cirlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}

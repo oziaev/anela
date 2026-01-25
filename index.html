@@ -136,12 +136,12 @@
           <nav>
             <ul>
               <li><a href="#">Top</a></li>
-              <li><a href="#alcohol">About</a></li>
-              <li><a href="menu.html">Charge</a></li>
-              <li><a href="#contact">Access</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="castwanted.html">Cast Wanted</a></li>
+              <li><a href="#access">Access</a></li>
             </ul>
           </nav>
-          <ul class="sns">
+          <ul class="header-sns">
             <li class="instagram">
               <!-- TODO -->
               <a href="#">
@@ -180,13 +180,14 @@
       </div>
     </header>
 
-    <main id="top" class="top">
+    <main id="top">
 
       <div class="mainvisual">
         <div class="container">
           <img src="img/fv-1.png" alt="ロゴ" class="fv-1"/>
           <img src="img/fv-2.png" alt="ロゴ" class="fv-2"/>
           <p class="fv-name-en">ANELA</p>
+          <p class="open fadein">Open  20:00  ~  02:00</p>
         </div>
         <div class="scrollbar_box">
           <div class="scrollbar-text"><span>SCROLL</span></div>
@@ -194,9 +195,9 @@
         </div>
       </div>
 
-      <section id="info" class="info fadein">
+      <section id="info">
         <div class="wrapper">
-          <h2 class="info-title">~ ご案内 ~</h2>
+          <h2 class="info-title section-title">~ ご案内 ~</h2>
 
           <div class="info-block">
             <h3>営業時間</h3>
@@ -211,141 +212,86 @@
           <div class="info-block">
             <h3>ご予約</h3>
             <p>
-              Instagram DMまたはお電話にて<br />
-              <span>( ※当日のご予約はお電話のみ )</span><br>
-              <span>( ※営業・勧誘目的のご連絡は一切お断りしております。)</span>
+              DMまたはお電話にて<br />
+              <span class="small">※営業・勧誘目的のご連絡は一切お断りしております。</span>
             </p>
             <div class="sns">
-              <a href="#">Instagram</a>
+              <a class="instagram" href="#"><img src="img/instagram.png" alt="インスタグラム"></a>
               <!-- TODO -->
               ・
-              <a href="tel:00000000000">000-00-0000</a>
+              <a class="tel" href="tel:00000000000">TEL</a>
               <!-- TODO -->
             </div>
           </div>
         </div>
       </section>
 
-      <section id="alcohol" class="alcohol">
-        <div class="container">
-          <ul class="alcohol-list">
-            <li class="shochu-whisky left fadein">
-              <img class="alcohol-img" src="img/alcohol-1.png" alt="" />
-              <div class="text">
-                <h3><span>Shochu & Whisky</span>焼酎・ウイスキー</h3>
-                <p>
-                  当店では、飲みやすい銘柄から深みのある一本まで、幅広くお楽しみいただけるラインナップをご用意しています。
-                </p>
-                <ul class="feature">
-                  <li class="feature-list">芋・麦・米など定番焼酎を数種類</li>
-                  <li class="feature-list">
-                    ストレートでもロックでも楽しめるウイスキー
-                  </li>
-                  <li class="feature-list">
-                    初めての方にもおすすめの飲みやすいボトル
-                  </li>
-                </ul>
-              </div>
-              <img src="img/frame.png" alt="フレーム" class="frame" />
-            </li>
-
-            <li class="wine-champagne right fadein">
-              <div class="text">
-                <h3><span>Wine & Champagne</span>ワイン・シャンパン</h3>
-                <p>
-                  軽く一杯にも、特別な夜にも。気軽に楽しめるワインとシャンパンをご用意。
-                </p>
-                <ul class="feature">
-                  <li class="feature-list">
-                    赤・白ともにバランスのよい人気銘柄
-                  </li>
-                  <li class="feature-list">
-                    記念日にも選ばれる上品なシャンパン
-                  </li>
-                  <li class="feature-list">甘口・辛口の好みに合わせてご提案</li>
-                </ul>
-              </div>
-              <img class="alcohol-img" src="img/alcohol-2.png" alt="" />
-              <img src="img/frame.png" alt="フレーム" class="frame" />
-            </li>
-
-            <li class="sake left fadein">
-              <img class="alcohol-img" src="img/alcohol-1.png" alt="" />
-              <div class="text">
-                <h3><span>Sake</span>日本酒</h3>
-                <p>
-                  当店では、地元で親しまれる
-                  山丹政宗（やまたんまさむね）を中心に、
-                  香り・キレともに楽しめる日本酒を取り揃えています。
-                </p>
-                <ul class="feature">
-                  <li class="feature-list">
-                    山丹政宗のやわらかな味わいが楽しめる定番の一杯
-                  </li>
-                  <li class="feature-list">
-                    フルーティな香りの銘柄や、キリッとした辛口
-                  </li>
-                  <li class="feature-list">
-                    入荷状況により、有名な人気銘柄が並ぶことも
-                  </li>
-                </ul>
-              </div>
-              <img src="img/frame.png" alt="フレーム" class="frame" />
-            </li>
-          </ul>
-
-          <a href="menu.html" class="link">Charge Info</a>
-        </div>
-      </section>
-
-      <section id="gallery" class="gallery">
+      <div id="page-link">
         <div class="wrapper">
-          <h2 class="gallery-title">Gallery</h2>
-          <ul class="gallery-lists fadein">
-            <li><img src="img/gallery-1.png" alt="店内写真" /></li>
-            <li><img src="img/gallery-2.png" alt="店内写真" /></li>
-            <li><img src="img/gallery-1.png" alt="店内写真" /></li>
-            <li><img src="img/gallery-2.png" alt="店内写真" /></li>
-            <li><img src="img/gallery-1.png" alt="店内写真" /></li>
-            <li><img src="img/gallery-2.png" alt="店内写真" /></li>
-          </ul>
+          <a href="menu.html">MENU</a>
+          <a href="castwanted.html">CAST WANTED</a>
         </div>
+      </div>
+
+      <section id="gallery">
+        <ul class="list-top">
+          <li class="item"><img src="img/gallery-1.jpg" alt="店内画像"></li>
+          <li class="item"><img src="img/gallery-2.jpg" alt="店内画像"></li>
+          <li class="item"><img src="img/gallery-3.jpg" alt="店内画像"></li>
+        </ul>
+        <ul class="list-bottom">
+          <li class="item"><img src="img/gallery-4.jpg" alt="店内画像"></li>
+          <li class="item"><img src="img/gallery-5.jpg" alt="店内画像"></li>
+        </ul>
       </section>
 
-      <section id="contact" class="contact">
-        <div class="wrapper">  
-          <h2 class="contact-title">Contact</h2>
-          <p>
-            ご予約やご不明点がありましたら、どうぞお気軽にご連絡ください。<br>DMまたはお電話にてお待ちしております。
-          </p>
-          <div class="sns">
-            <a href="#">Instagram</a><!-- TODO -->
-            ・
-            <a href="tel:00000000000">000-00-0000</a><!-- TODO -->
-          </div>
-          <ul class="attention">
-            <li>※当店は 未成年のご入店・お酒の提供はお断りしております。</li>
-            <li>※営業中は接客のため、DM の返信やお電話の対応にお時間をいただく場合がございます。</li>
-            <li>※営業・勧誘目的のご連絡は一切お断りしております。 何卒ご理解くださいませ。</li>
-          </ul>
+      <section id="access">
+        <div class="container">
+          <h2 class="section-title">ACCESS</h2>
           <p class="address">〒794-0041<br>愛媛県今治市松本町1丁目7-7<br>CORE 2nd 3F</p>
+            <div class="sns">
+              <a class="instagram" href="#"><img src="img/instagram.png" alt="インスタグラム"></a>
+              <!-- TODO -->
+              ・
+              <a class="tel" href="tel:00000000000">TEL</a>
+              <!-- TODO -->
+            </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d732.6457296417109!2d133.00050468338898!3d34.06466674982578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35503a6798965aed%3A0x5548c1adb4c89588!2z44Ki44ON44Op!5e0!3m2!1sja!2sjp!4v1765263034137!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d732.6457296417109!2d133.00050468338898!3d34.06466674982578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35503a6798965aed%3A0x5548c1adb4c89588!2z44Ki44ON44Op!5e0!3m2!1sja!2sjp!4v1765263034137!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
 
     </main>
 
     <footer>
-      <div class="container">
-        <nav>
-          <ul>
-            <li><a href="#">Top</a></li>
-            <li><a href="#alcohol">About</a></li>
-            <li><a href="menu.html">Charge</a></li>
-            <li><a href="#contact">Access</a></li>
+      <div class="footer-top">
+        <div class="container">
+          <img class="logo" src="img/footer-logo.png" alt="ロゴ">
+          <nav>
+            <ul>
+              <li><a href="#">TOP</a></li>
+              <li><a href="menu.html">CHARGE</a></li>
+              <li><a href="castwanted.html">CAST WANTED</a></li>
+            </ul>
+          </nav>
+          <div class="sns">
+            <a class="instagram" href="#"><img src="img/instagram.png" alt="インスタグラム"></a>
+            <!-- TODO -->
+            ・
+            <a class="tel" href="tel:00000000000">TEL</a>
+            <!-- TODO -->
+          </div>
+          <ul class="attention">
+            <li class="small">※当店は 未成年のご入店・お酒の提供はお断りしております。</li>
+            <li class="small">※営業中は接客のため、DM の返信やお電話の対応にお時間をいただく場合がございます。</li>
+            <li class="small">※営業・勧誘目的のご連絡は一切お断りしております。 何卒ご理解くださいませ。</li>
           </ul>
-        </nav>
-        <p>&copy; 2025 BOS Co., Ltd. All Rights Reserved.<br>Anela</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="small">&copy; 2025 BOS Co., Ltd. All Rights Reserved.<br>Anela</p>
+        </div>
       </div>
     </footer>
 

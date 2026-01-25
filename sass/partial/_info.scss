@@ -1,0 +1,38 @@
+@use "mixin" as m;
+
+#info {
+  text-align: center;
+  padding-inline: m.$padding;
+  margin-bottom: m.$bottom-sp;
+
+  .wrapper {
+    border: 1px solid m.$accent-color;
+    border-radius: 30px;
+    box-shadow: m.$shadow;
+    padding-block: 34px;
+
+    .info-block {
+      margin-bottom: 32px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      h3 {
+        font-size: 1.8rem;
+        margin-bottom: 16px;
+
+        @include m.tb-sm {
+          margin-bottom: 8px;
+        }
+      }
+
+      p {
+        span {
+          display: inline-block;
+          color: m.$accent-color;
+        }
+      }
+    }
+  }
+}
