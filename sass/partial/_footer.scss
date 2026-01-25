@@ -1,15 +1,67 @@
 @use '_mixin' as m;
 
 footer {
-  text-align: right;
-  padding: 32px 0;
 
-  nav {
-    margin-bottom: 24px;
+  .footer-top {
+    background-image: url(/img/mainvisual.jpg);
+    background-size: cover;
+    position: relative;
+    padding-top: 280px;
+    padding-bottom: m.$bottom-sp;
 
+    @include m.tb-sm {
+      padding-top: 200px;
+    }
+    
+    .logo {
+      width: 500px;
+      position: absolute;
+      top: 0;
+      left: 200px;
+      z-index: 5;
+      
+      @include m.pc-sm {
+        left: 100px;
+      }
+      
+      @include m.tb {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      @include m.tb-sm {
+        width: 350px;
+      }
+    }
+    
+    nav {
+      position: relative;
+      z-index: 10;
+      margin-left: 24px;
+      margin-bottom: 16px;
+            
+      ul {
+        li {
+          &:hover a {
+            color: m.$accent-color;
+          }
+        }
+      }
+    }
+
+    .sns {
+      margin-left: 24px;
+      margin-bottom: 16px;
+    }
+
+    .attention {
+      margin-left: 24px ;
+      color: #B3B3B3;
+    }
   }
 
-  p {
-    font-size: m.$fs-small;
+  .footer-bottom {
+    text-align: center;
+    padding-block: 24px;
   }
 }

@@ -1,0 +1,26 @@
+@use 'mixin' as m;
+
+#access {
+  text-align: center;
+  margin-bottom: m.$bottom;
+  padding-top: m.$bottom;
+
+  @include m.tb {
+    padding-top: m.$bottom-sp;
+  }
+
+  @include m.sp {
+    margin-bottom: m.$bottom-sp;
+  }
+
+  iframe {
+    width: 100%;
+    box-shadow: m.$shadow;
+    margin-top: m.$bottom-sp;
+
+    @include m.sp {
+      height: 200px;
+      margin-top: 32px;
+    }
+  }
+}

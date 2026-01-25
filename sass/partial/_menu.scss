@@ -6,8 +6,7 @@
   .container {
     text-align: center;
     position: relative;
-    padding-top: m.$bottom-sp;
-    padding-bottom: m.$bottom;
+    padding-block: m.$bottom-sp;
 
     .frame-1,
     .frame-2,
@@ -49,10 +48,6 @@
       transform: rotate(90deg);
     }
 
-    h2 {
-      margin-bottom: m.$bottom-sp;
-    }
-
     h3 {
       position: relative;
       color: m.$font-color;
@@ -70,7 +65,12 @@
     }
 
     .system {
-      margin-bottom: 96px;
+      margin-bottom: m.$bottom;
+
+      @include m.tb-sm {
+        margin-bottom: m.$bottom-sp;
+      }
+
       .list {
         .item {
           display: flex;
@@ -92,10 +92,14 @@
     .category {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 96px;
+      margin-bottom: m.$bottom;
 
       @include m.tb {
         flex-direction: column;
+      }
+
+      @include m.tb-sm {
+        margin-bottom: m.$bottom-sp;
       }
 
       &:last-child {
@@ -125,7 +129,12 @@
 
         @include m.tb {
           width: 100%;
-          margin-bottom: 96px;
+          margin-right: 0;
+          margin-bottom: m.$bottom;
+        }
+
+        @include m.tb-sm {
+          margin-bottom: m.$bottom-sp;
         }
 
         h4 {
